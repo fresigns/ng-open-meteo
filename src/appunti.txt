@@ -1,0 +1,39 @@
+header --> ng g c components/header
+list --> ng g c components/list
+card --> ng g c components/card
+details --> ng g c components/details
+service (che fa la chiamata) --> ng g s components/services/data
+model (location) --> ng g i model/location 
+
+
+1) fare la chiamata API dentro data.service
+
+import { HttpClient } from '@angular/common/http';
+
+export class DataService {
+
+  readonly BASE_URL = '';
+  constructor(private http: HttpClient) {
+  }
+
+
+
+
+2) 
+su app module importo 
+import { HttpClient } from '@angular/common/http'; 
+
+  imports: [
+    HttpClientModule
+  ],
+
+3) data service: 
+
+ getWeather():void{
+    this.http.get<any>
+
+4) model > location
+parsare il json 
+
+5) importa la lista nel routing
+app.routing.module
